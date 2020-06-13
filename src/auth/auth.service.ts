@@ -14,4 +14,8 @@ export class AuthService {
     return this.userRepository.signUp(authCredentialsDto);
   }
 
+  signIn(authCredentialsDto: AuthCredentialsDto): Promise<string> {
+    return this.userRepository.validatePassword(authCredentialsDto);
+  }
+
 }
